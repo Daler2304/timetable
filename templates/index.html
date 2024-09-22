@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Расписание СПбГУПТД</title>
+        <link
+            rel="shortcut icon"
+            href="../static/icon.png"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="main">
+            <div class="bar">
+                <div class="bar-2">
+                    <a href="https://sutd.ru/">
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/1/19/Логотип_СПбГУПТД.jpg"
+                            alt="sbuptd"
+                            class="bar-img"
+                        />
+                    </a>
+                    <p class="rasp">Расписание ВШПМ</p>
+                </div>
+                <p class="lang">
+                    <lang
+                        class="check-en"
+                        id="lang-en"
+                        onclick="setUnderline('en')"
+                        >En</lang
+                    >
+                    <per>|</per>
+                    <lang
+                        class="check-ru"
+                        id="lang-ru"
+                        onclick="setUnderline('ru')"
+                        >Ru</lang
+                    >
+                </p>
+            </div>
+
+            <div class="app">
+                <div class="sub-app">
+                    <p class="groups">
+                        <a href="https://hspm-timetable/1tiv2">1-ТИВ-2</a>
+                    </p>
+                    <p class="groups">1-ТИВ-3</p>
+                    <p class="groups">2-ТИВ-2</p>
+                    <p class="groups">3-ТИВ-3</p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function setUnderline(lang) {
+                const enElement = document.getElementById("lang-en");
+                const ruElement = document.getElementById("lang-ru");
+
+                if (lang === "en") {
+                    ruElement.style.textDecoration = "none";
+                    enElement.style.textDecoration = "underline";
+                } else if (lang === "ru") {
+                    ruElement.style.textDecoration = "underline";
+                    enElement.style.textDecoration = "none";
+                }
+            }
+        </script>
+    </body>
+</html>
