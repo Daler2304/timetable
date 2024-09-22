@@ -81,7 +81,7 @@
                 const enElement = document.getElementById("lang-en");
                 const ruElement = document.getElementById("lang-ru");
 
-                fetch("../lang.json") // Укажите правильный путь к вашему файлу
+                fetch("lang.json") // Укажите правильный путь к вашему файлу
                     .then((response) => {
                         if (!response.ok) {
                             throw new Error("Network response was not ok");
