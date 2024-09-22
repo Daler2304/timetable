@@ -6,14 +6,19 @@
         <title>Расписание СПбГУПТД</title>
         <link
             rel="shortcut icon"
-            href="static/icon.png"
+            href="../static/icon.png"
             type="image/x-icon"
         />
         <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
         <div class="main">
             <div class="bar">
+                <div class="pom"></div>
                 <div class="bar-2">
                     <a href="https://sutd.ru/">
                         <img
@@ -25,27 +30,25 @@
                     <p class="rasp">Расписание ВШПМ</p>
                 </div>
                 <p class="lang">
-                    <lang
+                    <span
                         class="check-en"
                         id="lang-en"
                         onclick="setUnderline('en')"
-                        >En</lang
+                        >En</span
                     >
-                    <per>|</per>
-                    <lang
+                    |
+                    <span
                         class="check-ru"
                         id="lang-ru"
                         onclick="setUnderline('ru')"
-                        >Ru</lang
+                        >Ru</span
                     >
                 </p>
             </div>
 
             <div class="app">
-                <div class="main-app">
-                    <p onclick="showList()" class="bar-year">
-                        Текущий уч. год 2024
-                    </p>
+                <div class="main-app" onclick="showList()">
+                    <p>Текущий уч. год 2024</p>
                 </div>
                 <div class="sub-app" id="sub-app">
                     <a href="https://hspm-timetable/1-tiv-2"
@@ -78,7 +81,7 @@
                 const enElement = document.getElementById("lang-en");
                 const ruElement = document.getElementById("lang-ru");
 
-                fetch("lang.json") // Укажите правильный путь к вашему файлу
+                fetch("../lang.json") // Укажите правильный путь к вашему файлу
                     .then((response) => {
                         if (!response.ok) {
                             throw new Error("Network response was not ok");
